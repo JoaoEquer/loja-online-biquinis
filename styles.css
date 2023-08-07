@@ -66,8 +66,17 @@ body {
     color: #354F52;
 }
 
-.bikini-image {
+.bikini-images {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.bikini-images img { 
     max-width: 100%;
+    height: auto;
+    margin: 5px;
+
 }
 
 .bikini-price {
