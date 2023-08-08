@@ -8,14 +8,43 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    background-repeat: repeat;
+    background-size: fixed;
+    background-attachment: fixed; 
+}
+.overlay {
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
 }
 
 /* Estilos do header */
+
+.logo {
+    width: 150px; /* Tamanho do logotipo */
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subtitle{
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.header-title {
+    font-size: 2rem; /* Tamanho do título */
+    color: #354F52;
+    margin: 0; /* Remova margens padrão */
+}
+
 .header {
     background-color: #84A98C;
-    padding: 20px;
+    padding: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
@@ -38,15 +67,19 @@ body {
 
 /* Estilos dos modelos de biquínis */
 .bikini-container {
-    max-height: calc(100vh - 120px); 
-    overflow-y: auto; 
+    max-height: calc(100vh - 120px);  
     padding-right: 15px;
     display: flex;
+    overflow-x: hidden;
+    overflow-y: scroll;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
     padding: 20px;
     background-color: #CAD2C5;
+    background-image: url('fotoarvore.jpg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .bikini {
@@ -54,7 +87,7 @@ body {
     border: 1px solid #e0e0e0;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+    margin: 10px;
     padding: 20px;
     text-align: center;
     width: 280px;
@@ -72,12 +105,14 @@ body {
     scroll-snap-type: x mandatory;
 }
 
-.bikini-images img { 
-    max-width: 100%;
-    height: auto;
-    margin: 5px;
-
+.bikini-images img {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 500px;
+    scroll-snap-align: start;
+    margin: 0 5px;
 }
+
 
 .bikini-price {
     font-size: 1.2rem;
